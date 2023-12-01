@@ -23,8 +23,19 @@ randomNumbers=arrayNumberGenerator()
 document.getElementById("hidden_number").innerText=randomNumbers;
 
 
+/* crel la scomparsa del testo e chiedo al utente quali numeri sono stati mostrati */
 setTimeout(function(){
-    document.getElementById("hidden_number").innerText=""
-   
+    document.getElementById("hidden_number").innerText="";
+        setTimeout(function(){
+            let correct=0;
+            for(let i=0; i<5; i++){
+                number=parseInt(prompt(`inserisci il  numero ${i+1}° che hai visualizzato`))
+                if(randomNumbers[i]==number){
+                    correct++;
+                }
+            }
+            document.getElementById("hidden_number").innerText=`${randomNumbers} i numeri erano questi, ne hai indovinati ${correct}`
+         },0)
 },3000)
 
+ 
