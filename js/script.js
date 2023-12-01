@@ -35,7 +35,7 @@ setTimeout(function(){
                 }
             }
             document.getElementById("hidden_number").innerText=`${randomNumbers} i numeri erano questi, ne hai indovinati ${correct}`
-         },0)
+         },1000)
 },3000)
 
  
